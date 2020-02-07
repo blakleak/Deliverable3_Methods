@@ -27,18 +27,9 @@ namespace Deliverable3_Methods
                 // Stores user input for the application 
                 string input = Console.ReadLine();
 
-                // This is void method 
-                userName();
-                void userName()
-                {
-                    // Display the user's name and a message
-                    Console.WriteLine();
-                    Console.WriteLine("Hello " + input + "!");
-                    Console.WriteLine("___________________________");
-                    Console.WriteLine();
-                    Console.WriteLine("Press any key to exit the application and try again...");
-                    Console.ReadKey(true);
-                }
+                // Execute the "UserName" method and display the input.
+                // This is a void method. 
+                UserName(input);
             }
             catch
             {
@@ -47,6 +38,20 @@ namespace Deliverable3_Methods
                 Console.WriteLine("Press any key to exit the application and try again...");
                 Console.ReadKey(true);
             } // End of catch 
-        }
-    }
-}
+        } // End of main
+
+        // This static void method will execute the code 
+        // The user's input will then be displayed in a message 
+        private static void UserName(string input)
+        {
+
+            // Display the user's name and a message
+            Console.WriteLine();
+            Console.WriteLine("Hello " + input + "!");
+            Console.WriteLine("___________________________");
+            Console.WriteLine();
+            Console.WriteLine("Press any key to exit the application and try again...");
+            Console.ReadKey(true);
+        } // End of UserName method
+    } // End of class
+} // End of namespace
